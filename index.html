@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFinance - NeoFin App | Launching Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3A2D69 0%, #6D53A2 50%, #38A7FF 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+        }
+        
+        .gradient-card {
+            background: linear-gradient(135deg, rgba(58, 45, 105, 0.1) 0%, rgba(109, 83, 162, 0.1) 100%);
+            border-left: 4px solid;
+            border-image: linear-gradient(to bottom, #3A2D69, #6D53A2) 1;
+        }
+        
+        .gradient-button {
+            background: linear-gradient(135deg, #3A2D69 0%, #6D53A2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(58, 45, 105, 0.2);
+        }
+        
+        .accent-button {
+            background: linear-gradient(135deg, #1DE9B6 0%, #38A7FF 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .accent-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(29, 233, 182, 0.3);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 15px 20px;
+            min-width: 80px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-700 to-purple-600 bg-clip-text text-transparent">| NEOFINANCE |</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">How It Works</a>
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#models" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Models</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <button class="gradient-button text-white px-6 py-2 rounded-full text-sm font-medium">Join Launch List</button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">How It Works</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Features</a>
+                <a href="#models" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Models</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                <button class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white gradient-button">Join Launch List</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="inline-block bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-full px-4 py-1 mb-4">
+                        <span class="text-sm font-semibold">Launching Soon!</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        NeoFinance Connects Africa's New Ventures with the World's Smartest Capital
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white text-opacity-90 mb-8">
+                        Where visionary founders & innovative investors meet to build the future - across every modern funding model.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="accent-button text-white px-8 py-4 rounded-full text-lg font-semibold">
+                            Join Our Launch List
+                        </button>
+                        <button class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                            Learn How It Works
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                        <div class="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white border-opacity-20">
+                            <div class="text-center mb-6">
+                                <div class="inline-block bg-white bg-opacity-20 rounded-full px-4 py-1">
+                                    <span class="text-sm font-semibold">Your all-in-one platform</span>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Smarter, faster, truly alternative venture & asset finance.</h3>
+                            <p class="mb-6">Launching in:</p>
+                            <div class="flex justify-between space-x-4">
+                                <div class="countdown-item text-center">
+                                    <div class="text-3xl font-bold" id="days">00</div>
+                                    <div class="text-xs opacity80">Days</div>
+                                </div>
+                                <div class="countdown-item text-center">
+                                    <div class="text-3xl font-bold" id="hours">00</div>
+                                    <div class="text-xs opacity80">Hours</div>
+                                </div>
+                                <div class="countdown-item text-center">
+                                    <div class="text-3xl font-bold" id="minutes">00</div>
+                                    <div class="text-xs opacity80">Minutes</div>
+                                </div>
+                                <div class="countdown-item text-center">
+                                    <div class="text-3xl font-bold" id="seconds">00</div>
+                                    <div class="text-xs opacity80">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How NeoFinance Works</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="gradient-card p-8 rounded-xl">
+                    <div class="feature-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-user-check text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Verified Founders & Investors</h3>
+                    <p class="text-gray-600">
+                        Every applicant, founder or funder is identity and credential verified for maximum trust.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="gradient-card p-8 rounded-xl">
+                    <div class="feature-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-project-diagram text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dynamic Matching</h3>
+                    <p class="text-gray-600">
+                        Our smart AI engine matches SMEs, projects and assets with investors based on appetite, terms and sector focus.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="gradient-card p-8 rounded-xl">
+                    <div class="feature-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Instant Negotiation & Commit</h3>
+                    <p class="text-gray-600">
+                        Discover proposals, negotiate securely, close deals - all within a compliant, mobile-first web app.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes NeoFin Different Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Makes NeoFinance Different?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're redefining alternative finance for Africa's digital future with innovative models and technology.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-chart-pie text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Fractional Ownership</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Buy/sell shares in property, startups or asset-backed deals from as little as R2000. Diversify your risk.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-handshake text-purple-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Seller Finance Marketplace</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Sellers and buyers connect directly. Streamlined digital contracts, auto-compliance, and real-time deal transparency.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fab fa-bitcoin text-blue-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Crypto-powered Lending</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Lend or borrow with digital assets (BTC, ETH, stablecoins), or earn yield via regulated crypto models.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-users text-green-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Peer-to-Peer Lending</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Flexible capital for entrepreneurs - direct from individuals or private funds with transparent rates.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-brain text-red-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">AI Credit Assessment</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Access personalized loan offers by allowing secure analysis of your alternative data (mobile, payments, etc.).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-mobile-alt text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Mobile-First Experience</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            NeoFin Web App - add to home screen, use anywhere with high speed, mobile-optimized UX.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Founders & For Investors Sections -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- For Founders -->
+                <div class="gradient-card p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold mb-6">For Founders / Entrepreneurs</h2>
+                    <p class="text-xl mb-6">Ready for capital?</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Pitch your verified business or asset to a diverse investor pool</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Get offers tailored to your stage, risk, sector & structure needs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>All-in-one: Applications, term sheet negotiation, tracking, and funding</span>
+                        </li>
+                    </ul>
+                    <button class="accent-button text-white px-6 py-3 rounded-full text-sm font-medium">
+                        Funding Options
+                    </button>
+                </div>
+                
+                <!-- For Investors -->
+                <div class="gradient-card p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold mb-6">For Funders / Investors</h2>
+                    <p class="text-xl mb-6">Grow your capital, your way.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Explore pre-verified ventures, assets, or peer lending portfolios</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Set your funding appetite, risk preferences, and sectors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Real-time dealflow, onboarding and fractional portfolios in one secure dashboard</span>
+                        </li>
+                    </ul>
+                    <button class="accent-button text-white px-6 py-3 rounded-full text-sm font-medium">
+                        Explore Dealflow
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Models Section -->
+    <section id="models" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Financing Models Explained</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the model that fits your needs or combine them for customized solutions.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Model 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-puzzle-piece text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Fractional Investing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Co-own property, business or alternative assets for diversified returns.
+                        </p>
+                        <div class="mt-auto">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-store text-purple-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Seller Finance</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Enable direct deals - deferred payment, flexible terms, compliant paperwork.
+                        </p>
+                        <div class="mt-auto">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fab fa-ethereum text-blue-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">DeFi & Crypto Lending</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Access/request crypto-collateralized loans or invest in yield-generating pools.
+                        </p>
+                        <div class="mt-auto">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Innovative</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-chart-line text-green-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Revenue-Based Financing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Growth funds repaid as a share of revenue - not equity dilute. Perfect for startups and SMEs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Model 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-user-friends text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Peer & Crowd Lending</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Private or group investors pool funds for direct entrepreneur loans.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Model 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition h-full">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-file-invoice-dollar text-red-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold">Traditional Term Loans</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            For larger ventures or assets, modernized with digital ID, underwriting and management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Compliance Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Trust & Compliance</h2>
+                <p class="text-xl max-w-3xl mx-auto opacity-90">
+                    We prioritize security, compliance, and transparency in every transaction.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6 text-center">
+                    <i class="fas fa-shield-alt text-3xl mb-4 text-blue-300"></i>
+                    <h3 class="text-lg font-semibold mb-2">Fully Verified</h3>
+                    <p class="text-sm opacity-80">All participants complete KYC/AML checks</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6 text-center">
+                    <i class="fas fa-file-contract text-3xl mb-4 text-purple-300"></i>
+                    <h3 class="text-lg font-semibold mb-2">Smart Contracts</h3>
+                    <p class="text-sm opacity-80">Digital agreements with auto-compliance</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6 text-center">
+                    <i class="fas fa-balance-scale text-3xl mb-4 text-green-300"></i>
+                    <h3 class="text-lg font-semibold mb-2">Regulatory-Aligned</h3>
+                    <p class="text-sm opacity-80">Compliant for Africa with global roadmap</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6 text-center">
+                    <i class="fas fa-lock text-3xl mb-4 text-yellow-300"></i>
+                    <h3 class="text-lg font-semibold mb-2">Data Privacy</h3>
+                    <p class="text-sm opacity-80">24/7 fraud monitoring & encryption</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Community Says</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="gradient-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Thandi M.</h4>
+                            <p class="text-sm text-gray-600">Founder, AgriTech Startup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "NeoFinance let us close funding in days, not months. The platform connected us with investors who truly understood our vision and growth potential."
+                    </p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <div class="gradient-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">David K.</h4>
+                            <p class="text-sm text-gray-600">Angel Investor</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "I invested in my first cross-border deal with total confidence. The verification process and smart contracts made everything seamless and secure."
+                    </p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-semibold mb-4">Backed by industry leaders</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-70">
+                    <div class="w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">Partner 1</div>
+                    <div class="w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">Partner 2</div>
+                    <div class="w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">Partner 3</div>
+                    <div class="w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">Partner 4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Help Shape the Future of Finance in Africa</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Early users get exclusive first access, rewards and influence over platform roadmap and features.
+            </p>
+            
+            <form class="max-w-md mx-auto mb-8">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full text-gray-900 focus:outline-none">
+                    <button type="submit" class="accent-button text-white px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap">
+                        Join the Launch List
+                    </button>
+                </div>
+            </form>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-telegram-plane text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
+                <a href="#" class="text-white hover:underline">Investor Deck (PDF)</a>
+                <a href="#" class="text-white hover:underline">What's NeoFin App? (Quick Explainer)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">NEOFINANCE</h3>
+                    <p class="text-gray-400">
+                        NeoFin App by NeoFinance - Launching Soon (2025)
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>Registered in South Africa. Global roadmap in progress.</p>
+                <p class="mt-2">© 2025 NeoFinance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Countdown timer
+        function updateCountdown() {
+            const launchDate = new Date('2025-01-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Renrew/electro" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
