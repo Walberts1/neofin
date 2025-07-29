@@ -1,5 +1,5 @@
 ---
-title: electro
+title: neofin
 emoji: 🐳
 colorFrom: red
 colorTo: gray
